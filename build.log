@@ -1,0 +1,17 @@
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32m✓[39m 1 modules transformed.
+[31m✗[39m Build failed in 78ms
+[31merror during build:
+[31m[@tailwindcss/vite:generate:build] Cannot apply unknown utility class `gap-2`. Are you using CSS modules or similar and missing `@reference`? https://tailwindcss.com/docs/functions-and-directives#reference-directive[31m
+file: [36mC:/Users/kevin/Documents/kevin/JL SOLUTION/index.html?html-proxy&inline-css&index=0.css[31m
+    at onInvalidCandidate (file:///C:/Users/kevin/Documents/kevin/JL%20SOLUTION/node_modules/tailwindcss/dist/chunk-F4544Y4M.mjs:21:1314)
+    at $e (file:///C:/Users/kevin/Documents/kevin/JL%20SOLUTION/node_modules/tailwindcss/dist/chunk-F4544Y4M.mjs:16:37066)
+    at file:///C:/Users/kevin/Documents/kevin/JL%20SOLUTION/node_modules/tailwindcss/dist/chunk-F4544Y4M.mjs:21:355
+    at Cr (file:///C:/Users/kevin/Documents/kevin/JL%20SOLUTION/node_modules/tailwindcss/dist/chunk-F4544Y4M.mjs:3:1733)
+    at _ (file:///C:/Users/kevin/Documents/kevin/JL%20SOLUTION/node_modules/tailwindcss/dist/chunk-F4544Y4M.mjs:3:1377)
+    at Ce (file:///C:/Users/kevin/Documents/kevin/JL%20SOLUTION/node_modules/tailwindcss/dist/chunk-F4544Y4M.mjs:21:172)
+    at Zi (file:///C:/Users/kevin/Documents/kevin/JL%20SOLUTION/node_modules/tailwindcss/dist/chunk-F4544Y4M.mjs:38:294)
+    at async ua (file:///C:/Users/kevin/Documents/kevin/JL%20SOLUTION/node_modules/tailwindcss/dist/chunk-F4544Y4M.mjs:38:631)
+    at async yf (file:///C:/Users/kevin/Documents/kevin/JL%20SOLUTION/node_modules/tailwindcss/dist/chunk-F4544Y4M.mjs:38:1406)
+    at async uu (file:///C:/Users/kevin/Documents/kevin/JL%20SOLUTION/node_modules/@tailwindcss/node/dist/index.mjs:10:3457)[39m

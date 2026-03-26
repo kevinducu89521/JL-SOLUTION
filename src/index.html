@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JL Solution - Servicios Automotrices & Seguros en Corona, New York</title>
+  <meta name="description" content="JL Solution en Corona, New York. Placas el mismo día, registros, transferencias, seguros de autos, hogar y salud, notario público y subastas de autos usados." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --color-navy: oklch(0.22 0.07 245);
+      --color-orange: oklch(0.62 0.19 42);
+      --color-orange-light: oklch(0.72 0.19 42);
+      --color-cream: oklch(0.93 0.015 80);
+    }
+    body { font-family: 'Source Sans 3', sans-serif; }
+    h1, h2, h3, h4, h5, h6 { font-family: 'Montserrat', sans-serif; }
+    .jl-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 28px;
+      border-radius: 10px;
+      background: var(--color-orange);
+      color: white;
+      font-weight: 700;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+    .jl-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 25px rgba(0,0,0,0.2); }
+    .service-card { padding: 20px; border-radius: 12px; border-left: 4px solid var(--color-orange); background: #f9f7f4; transition: all 0.3s ease; }
+    .service-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.1); }
+  </style>
+</head>
+<body class="bg-white" onload="initPage()">
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="background: var(--color-navy);">
+    <div class="hidden md:block py-1.5 px-4" style="background: var(--color-orange);">
+      <div class="max-w-6xl mx-auto flex justify-between items-center text-white text-sm">
+        <span class="font-semibold">📍 40-12 National St, Corona, New York 11368</span>
+        <a href="tel:+19292403566" class="flex items-center gap-1.5 font-bold hover:underline">
+          <i class="fas fa-phone text-xs"></i> Llámanos: (928) 240-3566
+        </a>
+      </div>
+    </div>
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <a href="#inicio" class="flex items-center gap-3" onclick="smoothScroll(event, '#inicio')">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center font-black text-white text-lg" style="background: var(--color-orange);">JL</div>
+          <div><div class="text-white font-black text-xl" style="font-family: Montserrat;">JL SOLUTION</div><div class="text-sm font-semibold" style="color: var(--color-orange);">Corona</div></div>
+        </a>
+        <div class="hidden lg:flex items-center gap-1">
+          <a href="#inicio" onclick="smoothScroll(event, '#inicio')" class="text-white px-3 py-2 rounded hover:bg-white/10">Inicio</a>
+          <a href="#servicios" onclick="smoothScroll(event, '#servicios')" class="text-white px-3 py-2 rounded hover:bg-white/10">Servicios</a>
+          <a href="#subastas" onclick="smoothScroll(event, '#subastas')" class="text-white px-3 py-2 rounded hover:bg-white/10">Subastas</a>
+          <a href="#nosotros" onclick="smoothScroll(event, '#nosotros')" class="text-white px-3 py-2 rounded hover:bg-white/10">Nosotros</a>
+          <a href="#contacto" onclick="smoothScroll(event, '#contacto')" class="text-white px-3 py-2 rounded hover:bg-white/10">Contacto</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="inicio" class="relative min-h-screen flex items-center overflow-hidden pt-32 pb-16" 
+    style="background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663469115047/VsguVjSguDvHcp4aMTBWqT/jl-hero-bg-QypYjnY5jWvQX2JK39tgfN.webp'); background-size: cover; background-position: center;">
+    <div class="absolute inset-0" style="background: linear-gradient(105deg, rgba(56,35,69,0.92) 0%, rgba(56,35,69,0.75) 50%, rgba(56,35,69,0.4) 100%);"></div>
+    <div class="absolute left-0 top-0 bottom-0 w-1.5" style="background: var(--color-orange);"></div>
+    <div class="relative max-w-6xl mx-auto px-4 z-10">
+      <div class="max-w-3xl">
+        <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold mb-6" style="background: rgba(209,108,34,0.2); border: 1px solid rgba(209,108,34,0.6); color: var(--color-orange-light); font-family: Montserrat;">
+          <span class="w-2 h-2 rounded-full" style="background: var(--color-orange-light);"></span>
+          Corona, New York 11368 · Abierto Hoy
+        </div>
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6" style="font-family: Montserrat;">
+          Tu Solución<br><span style="color: var(--color-orange-light);">Completa</span><br>en New York
+        </h1>
+        <p class="text-lg md:text-xl text-white/85 mb-8 max-w-xl leading-relaxed">Placas el mismo día, registros, seguros de auto, hogar y salud, notario público y subastas de autos usados.</p>
+        <div class="grid grid-cols-2 gap-2 mb-10 max-w-lg" style="font-family: Montserrat;">
+          <div class="flex items-center gap-2"><i class="fas fa-check-circle" style="color: var(--color-orange-light);"></i><span class="text-white/90 text-sm font-semibold">Placas el Mismo Día</span></div>
+          <div class="flex items-center gap-2"><i class="fas fa-check-circle" style="color: var(--color-orange-light);"></i><span class="text-white/90 text-sm font-semibold">Seguros desde $35/mes</span></div>
+          <div class="flex items-center gap-2"><i class="fas fa-check-circle" style="color: var(--color-orange-light);"></i><span class="text-white/90 text-sm font-semibold">Notario Público</span></div>
+          <div class="flex items-center gap-2"><i class="fas fa-check-circle" style="color: var(--color-orange-light);"></i><span class="text-white/90 text-sm font-semibold">Subasta de Autos</span></div>
+        </div>
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#contacto" onclick="smoothScroll(event, '#contacto')" class="jl-btn-primary text-center"><i class="fas fa-phone"></i> Contáctanos</a>
+          <a href="https://maps.google.com/?q=40-12+National+St+Corona+New+York+11368" target="_blank" class="jl-btn-primary text-center" style="background: transparent; border: 2px solid var(--color-orange); color: var(--color-orange);"><i class="fas fa-map-marker-alt"></i> Cómo Llegar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- URGENCY BANNER -->
+  <div class="py-5" style="background: var(--color-orange);">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+        <div class="flex items-center gap-2.5 text-white"><i class="fas fa-bolt"></i><span class="font-bold text-sm" style="font-family: Montserrat;">Placas el Mismo Día — Sin Cita</span></div>
+        <div class="hidden sm:block text-white/40">|</div>
+        <div class="flex items-center gap-2.5 text-white"><i class="fas fa-shield"></i><span class="font-bold text-sm" style="font-family: Montserrat;">Seguros desde $35/mes</span></div>
+        <div class="hidden sm:block text-white/40">|</div>
+        <div class="flex items-center gap-2.5 text-white"><i class="fas fa-award"></i><span class="font-bold text-sm" style="font-family: Montserrat;">10+ Años de Experiencia</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES SECTION -->
+  <section id="servicios" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <p class="text-sm font-bold tracking-widest uppercase mb-3" style="color: var(--color-orange); font-family: Montserrat;">Nuestros Servicios</p>
+        <h2 class="text-4xl md:text-5xl font-black mb-4" style="font-family: Montserrat;">Todo Lo Que Necesitas<br>En Un Solo Lugar</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto text-lg">Brindamos soluciones completas automotrices, de seguros y notaría para toda la comunidad de New York.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="service-card"><div style="font-family: Montserrat;"><div class="text-2xl mb-2" style="color: var(--color-orange);"><i class="fas fa-car"></i></div><h3 class="text-xl font-bold mb-2">Placas el Mismo Día</h3></div><p class="text-gray-600 text-sm mb-4">Obtén tus placas de New York el mismo día.</p></div>
+        <div class="service-card"><div style="font-family: Montserrat;"><div class="text-2xl mb-2" style="color: var(--color-orange);"><i class="fas fa-file-alt"></i></div><h3 class="text-xl font-bold mb-2">Registro & Transferencias</h3></div><p class="text-gray-600 text-sm mb-4">Registra tu vehículo de forma rápida.</p></div>
+        <div class="service-card"><div style="font-family: Montserrat;"><div class="text-2xl mb-2" style="color: var(--color-orange);"><i class="fas fa-copy"></i></div><h3 class="text-xl font-bold mb-2">Duplicados</h3></div><p class="text-gray-600 text-sm mb-4">Tramitamos duplicados de documentos.</p></div>
+        <div class="service-card"><div style="font-family: Montserrat;"><div class="text-2xl mb-2" style="color: var(--color-orange);"><i class="fas fa-shield"></i></div><h3 class="text-xl font-bold mb-2">Seguros de Auto</h3></div><p class="text-gray-600 text-sm mb-4">Cotizaciones competitivas en New York.</p></div>
+        <div class="service-card"><div style="font-family: Montserrat;"><div class="text-2xl mb-2" style="color: var(--color-orange);"><i class="fas fa-home"></i></div><h3 class="text-xl font-bold mb-2">Seguros del Hogar</h3></div><p class="text-gray-600 text-sm mb-4">Protege tu hogar con nuestras pólizas.</p></div>
+        <div class="service-card"><div style="font-family: Montserrat;"><div class="text-2xl mb-2" style="color: var(--color-orange);"><i class="fas fa-heart"></i></div><h3 class="text-xl font-bold mb-2">Seguros de Salud</h3></div><p class="text-gray-600 text-sm mb-4">Planes de salud para familias.</p></div>
+        <div class="service-card"><div style="font-family: Montserrat;"><div class="text-2xl mb-2" style="color: var(--color-orange);"><i class="fas fa-stamp"></i></div><h3 class="text-xl font-bold mb-2">Notario Público</h3></div><p class="text-gray-600 text-sm mb-4">Servicios notariales confiables.</p></div>
+        <div class="service-card"><div style="font-family: Montserrat;"><div class="text-2xl mb-2" style="color: var(--color-orange);"><i class="fas fa-gavel"></i></div><h3 class="text-xl font-bold mb-2">Subasta de Autos</h3></div><p class="text-gray-600 text-sm mb-4">Autos usados a precios increíbles.</p></div>
+      </div>
+      <div class="text-center mt-16"><a href="#contacto" onclick="smoothScroll(event, '#contacto')" class="jl-btn-primary"><i class="fas fa-arrow-right"></i> Solicitar Información</a></div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contacto" class="py-24" style="background: var(--color-navy);">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-14">
+        <p class="text-sm font-bold tracking-widest uppercase mb-3" style="color: var(--color-orange); font-family: Montserrat;">Estamos Aquí Para Ayudarte</p>
+        <h2 class="text-4xl md:text-5xl font-black text-white mb-4" style="font-family: Montserrat;">Contáctanos</h2>
+        <div class="w-16 h-1 mx-auto rounded-full" style="background: var(--color-orange);"></div>
+      </div>
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <div>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <a href="tel:+19292403566" class="rounded-xl p-4 flex items-start gap-3 hover:bg-white/10" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08);">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(209,108,34,0.2);"><i class="fas fa-phone" style="color: var(--color-orange-light);"></i></div>
+              <div><div class="text-white/60 text-xs font-semibold uppercase" style="font-family: Montserrat;">Teléfono</div><div class="text-white text-sm font-medium">(928) 240-3566</div></div>
+            </a>
+            <a href="mailto:info@jlsolutionny.com" class="rounded-xl p-4 flex items-start gap-3 hover:bg-white/10" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08);">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0" style="background: rgba(209,108,34,0.2);"><i class="fas fa-envelope" style="color: var(--color-orange-light);"></i></div>
+              <div><div class="text-white/60 text-xs font-semibold uppercase" style="font-family: Montserrat;">Email</div><div class="text-white text-sm font-medium">info@jlsolutionny.com</div></div>
+            </a>
+          </div>
+          <div class="rounded-2xl p-6" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.08);">
+            <h3 class="text-white font-bold text-xl mb-5" style="font-family: Montserrat;">Envíanos un Mensaje</h3>
+            <form id="contactForm" class="flex flex-col gap-4" onsubmit="handleFormSubmit(event)">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <input type="text" required placeholder="Tu nombre" class="px-4 py-2.5 rounded-lg text-gray-900 text-sm outline-none" style="background: rgba(56,35,69,0.3); border: 1px solid rgba(255,255,255,0.15);">
+                <input type="tel" required placeholder="Tu teléfono" class="px-4 py-2.5 rounded-lg text-gray-900 text-sm outline-none" style="background: rgba(56,35,69,0.3); border: 1px solid rgba(255,255,255,0.15);">
+              </div>
+              <textarea rows="3" placeholder="Tu mensaje" class="px-4 py-2.5 rounded-lg text-gray-900 text-sm outline-none resize-none" style="background: rgba(56,35,69,0.3); border: 1px solid rgba(255,255,255,0.15);"></textarea>
+              <button type="submit" class="jl-btn-primary justify-center"><i class="fas fa-paper-plane"></i> Enviar</button>
+            </form>
+          </div>
+        </div>
+        <div class="flex flex-col gap-6">
+          <a href="tel:+19292403566" class="rounded-xl p-4 flex items-center gap-4 hover:bg-white/10" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(209,108,34,0.4);">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: var(--color-orange);"><i class="fas fa-phone text-white text-xl"></i></div>
+            <div><div class="text-white font-bold" style="font-family: Montserrat;">Llámanos</div><div class="text-white/70 text-sm">(928) 240-3566</div></div>
+          </a>
+          <a href="https://maps.google.com/?q=40-12+National+St+Corona+New+York+11368" target="_blank" class="rounded-xl p-4 flex items-center gap-4 hover:bg-white/10" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(209,108,34,0.4);">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0" style="background: var(--color-orange);"><i class="fas fa-map-marker-alt text-white text-xl"></i></div>
+            <div><div class="text-white font-bold" style="font-family: Montserrat;">Ubicación</div><div class="text-white/70 text-sm">40-12 National St, Corona</div></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-12 bg-black/90">
+    <div class="max-w-6xl mx-auto px-4 text-white/70 text-sm text-center">
+      <p>&copy; 2024 JL Solution. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    function initPage() {
+      console.log('Página cargada');
+    }
+    function smoothScroll(e, target) {
+      e.preventDefault();
+      const element = document.querySelector(target);
+      if (element) element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    function handleFormSubmit(e) {
+      e.preventDefault();
+      alert('¡Gracias! Tu mensaje ha sido enviado.');
+      document.getElementById('contactForm').reset();
+    }
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      navbar.style.boxShadow = window.scrollY > 60 ? '0 4px 20px rgba(0,0,0,0.1)' : 'none';
+    });
+  </script>
+</body>
+</html>

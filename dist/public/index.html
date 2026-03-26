@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>JL Solution - Servicios Automotrices & Seguros en Corona, New York</title>
+
+  <!-- SEO & Open Graph Meta Tags -->
+  <meta name="description"
+    content="JL Solution en Corona, New York. Placas el mismo día, registros, transferencias, seguros de autos, hogar y salud, notario público y subastas de autos usados." />
+  <meta property="og:title" content="JL Solution - Servicios Automotrices & Seguros" />
+  <meta property="og:description"
+    content="Tu solución completa en New York: Placas el mismo día, seguros de auto desde $35/mes, notario público y subastas de autos." />
+  <meta property="og:image"
+    content="https://d2xsxph8kpxj0f.cloudfront.net/310519663469115047/VsguVjSguDvHcp4aMTBWqT/jl-hero-bg-QypYjnY5jWvQX2JK39tgfN.webp" />
+  <meta property="og:url" content="https://jlsolution.com/" />
+  <meta property="og:type" content="website" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/svgs/solid/car.svg"
+    type="image/svg+xml" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Source+Sans+3:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <!-- Tailwind CSS (compiled via Vite) -->
+  <link rel="stylesheet" crossorigin href="/assets/index-jZGm_pvY.css">
+</head>
+
+<body class="bg-white">
+  <!-- NAVBAR -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-jl-navy">
+    <!-- Top bar (hidden on mobile) -->
+    <div class="hidden md:block py-1.5 px-4 bg-jl-orange">
+      <div class="max-w-6xl mx-auto flex justify-between items-center text-white text-sm">
+        <span class="font-semibold">📍 40-12 National St, Corona, New York</span>
+        <a href="tel:+19292403566" class="flex items-center gap-1.5 font-bold hover:underline">
+          <i class="fas fa-phone text-xs"></i> Llámanos: (928) 240-3566
+        </a>
+      </div>
+    </div>
+
+    <!-- Main navbar -->
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex items-center justify-between h-16">
+        <!-- Logo -->
+        <a href="#inicio" class="flex items-center gap-3" onclick="smoothScroll(event, '#inicio')">
+          <div class="w-10 h-10 rounded-lg flex items-center justify-center font-black text-white text-lg bg-jl-orange">
+            JL</div>
+          <div>
+            <div class="text-white font-black text-xl font-montserrat">JL SOLUTION</div>
+          </div>
+        </a>
+
+        <!-- Desktop menu -->
+        <div class="hidden lg:flex items-center gap-1">
+          <a href="#inicio" onclick="smoothScroll(event, '#inicio')"
+            class="text-white px-3 py-2 rounded font-montserrat font-medium hover:bg-white/10">Inicio</a>
+          <div class="relative group">
+            <button
+              class="text-white px-3 py-2 rounded font-montserrat font-medium hover:bg-white/10 flex items-center gap-1">
+              Servicios <i class="fas fa-chevron-down text-xs"></i>
+            </button>
+            <div class="hidden group-hover:block absolute left-0 mt-0 w-48 bg-white rounded shadow-lg py-2 z-10">
+              <a href="#servicios" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 font-medium">Placas el Mismo
+                Día</a>
+              <a href="#servicios" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 font-medium">Seguros de
+                Auto</a>
+            </div>
+          </div>
+          <a href="#subastas" onclick="smoothScroll(event, '#subastas')"
+            class="text-white px-3 py-2 rounded font-montserrat font-medium hover:bg-white/10">Subastas</a>
+          <a href="#nosotros" onclick="smoothScroll(event, '#nosotros')"
+            class="text-white px-3 py-2 rounded font-montserrat font-medium hover:bg-white/10">Nosotros</a>
+          <a href="#contacto" onclick="smoothScroll(event, '#contacto')"
+            class="text-white px-3 py-2 rounded font-montserrat font-medium hover:bg-white/10">Contacto</a>
+        </div>
+
+        <!-- Mobile menu button -->
+        <button class="lg:hidden text-white p-2 focus:outline-none" id="mobileMenuBtn" aria-label="Abrir menú">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu (hidden by default) -->
+    <div id="mobileMenu" class="hidden lg:hidden flex-col bg-jl-navy px-4 pt-2 pb-4 shadow-lg border-t border-white/10">
+      <a href="#inicio" onclick="smoothScroll(event, '#inicio')"
+        class="text-white block px-3 py-3 rounded font-montserrat hover:bg-white/10">Inicio</a>
+      <a href="#servicios" onclick="smoothScroll(event, '#servicios')"
+        class="text-white block px-3 py-3 rounded font-montserrat hover:bg-white/10">Servicios</a>
+      <a href="#subastas" onclick="smoothScroll(event, '#subastas')"
+        class="text-white block px-3 py-3 rounded font-montserrat hover:bg-white/10">Subastas</a>
+      <a href="#nosotros" onclick="smoothScroll(event, '#nosotros')"
+        class="text-white block px-3 py-3 rounded font-montserrat hover:bg-white/10">Nosotros</a>
+      <a href="#contacto" onclick="smoothScroll(event, '#contacto')"
+        class="text-white block px-3 py-3 rounded font-montserrat hover:bg-white/10">Contacto</a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section id="inicio"
+    class="relative min-h-screen flex items-center overflow-hidden pt-32 pb-16 bg-cover bg-center bg-fixed"
+    style="background-image: url('https://d2xsxph8kpxj0f.cloudfront.net/310519663469115047/VsguVjSguDvHcp4aMTBWqT/jl-hero-bg-QypYjnY5jWvQX2JK39tgfN.webp');">
+
+    <!-- Dark overlay -->
+    <div class="absolute inset-0 bg-gradient-to-r from-[#382345]/95 via-[#382345]/80 to-[#382345]/40"></div>
+
+    <!-- Orange accent bar -->
+    <div class="absolute left-0 top-0 bottom-0 w-1.5 bg-jl-orange"></div>
+
+    <div class="relative max-w-6xl mx-auto px-4 z-10 w-full">
+      <div class="max-w-3xl">
+        <!-- Badge -->
+        <div
+          class="inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold mb-6 font-montserrat bg-jl-orange/20 border border-jl-orange/60 text-jl-orange-light">
+          <span class="w-2 h-2 rounded-full bg-jl-orange-light"></span>
+          Corona, New York 11368 · Abierto Hoy
+        </div>
+
+        <!-- Main heading -->
+        <h1 class="text-5xl md:text-6xl lg:text-7xl font-black text-white leading-tight mb-6 font-montserrat">
+          Tu Solución<br>
+          <span class="text-jl-orange-light">Completa</span><br>
+          en New York
+        </h1>
+
+        <p class="text-lg md:text-xl text-white/85 mb-8 max-w-xl leading-relaxed">
+          Placas el mismo día, registros, seguros de auto, hogar y salud, notario público y subastas de autos usados.
+          Todo en un solo lugar para toda el área de New York.
+        </p>
+
+        <!-- Highlights -->
+        <div class="grid grid-cols-2 gap-2 mb-10 max-w-lg font-montserrat">
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check-circle text-lg text-jl-orange-light"></i>
+            <span class="text-white/90 text-sm font-semibold">Placas el Mismo Día</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check-circle text-lg text-jl-orange-light"></i>
+            <span class="text-white/90 text-sm font-semibold">Seguros desde $35/mes</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check-circle text-lg text-jl-orange-light"></i>
+            <span class="text-white/90 text-sm font-semibold">Notario Público</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <i class="fas fa-check-circle text-lg text-jl-orange-light"></i>
+            <span class="text-white/90 text-sm font-semibold">Subasta de Autos</span>
+          </div>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex flex-col sm:flex-row gap-4">
+          <a href="#contacto" onclick="smoothScroll(event, '#contacto')" class="jl-btn-primary justify-center">
+            <i class="fas fa-phone"></i> Contáctanos Ahora
+          </a>
+          <a href="https://maps.google.com/?q=40-12+National+St+Corona+New+York+11368" target="_blank"
+            class="jl-btn-primary justify-center bg-transparent border-2 border-jl-orange text-jl-orange hover:bg-jl-orange hover:text-white">
+            <i class="fas fa-map-marker-alt"></i> Cómo Llegar
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- URGENCY BANNER -->
+  <div class="py-5 bg-jl-orange">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-10">
+        <div class="flex items-center gap-2.5 text-white">
+          <i class="fas fa-bolt text-lg flex-shrink-0"></i>
+          <span class="font-bold text-sm tracking-wide font-montserrat">Placas el Mismo Día — Sin Cita</span>
+        </div>
+        <div class="hidden sm:block text-white/40">|</div>
+        <div class="flex items-center gap-2.5 text-white">
+          <i class="fas fa-shield-alt text-lg flex-shrink-0"></i>
+          <span class="font-bold text-sm tracking-wide font-montserrat">Seguros desde $35/mes</span>
+        </div>
+        <div class="hidden sm:block text-white/40">|</div>
+        <div class="flex items-center gap-2.5 text-white">
+          <i class="fas fa-award text-lg flex-shrink-0"></i>
+          <span class="font-bold text-sm tracking-wide font-montserrat">10+ Años de Experiencia en NY</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICES SECTION -->
+  <section id="servicios" class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <!-- Header -->
+      <div class="text-center mb-16">
+        <p class="text-sm font-bold tracking-widest uppercase mb-3 font-montserrat text-jl-orange">
+          Nuestros Servicios
+        </p>
+        <h2 class="jl-section-title mb-4">Todo Lo Que Necesitas<br>En Un Solo Lugar</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto text-lg">
+          Brindamos soluciones automotrices de seguros y notaría para toda la comunidad de New York.
+        </p>
+      </div>
+
+      <!-- Services Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Service 1: Placas -->
+        <div class="service-card border border-gray-200">
+          <div class="font-montserrat">
+            <div class="text-2xl mb-2 text-jl-orange"><i class="fas fa-car"></i></div>
+            <h3 class="text-xl font-bold mb-2 font-montserrat">Placas el Mismo Día</h3>
+          </div>
+          <p class="text-gray-600 text-sm mb-4">Obtén tus placas de New York el mismo día de tu visita. Proceso rápido,
+            sin citas largas ni filas interminables.</p>
+          <span
+            class="inline-block px-3 py-1 text-xs font-bold rounded-full text-white font-montserrat bg-jl-orange">Más
+            Popular</span>
+        </div>
+
+        <!-- Service 2: Registro -->
+        <div class="service-card border border-gray-200">
+          <div class="font-montserrat">
+            <div class="text-2xl mb-2 text-jl-orange"><i class="fas fa-file-alt"></i></div>
+            <h3 class="text-xl font-bold mb-2 font-montserrat">Registro & Transferencias</h3>
+          </div>
+          <p class="text-gray-600 text-sm mb-4">Registra tu vehículo o transfiere la titularidad de forma rápida y sin
+            complicaciones. Manejamos todos los trámites del DMV.</p>
+        </div>
+
+        <!-- Service 3: Duplicados -->
+        <div class="service-card border border-gray-200">
+          <div class="font-montserrat">
+            <div class="text-2xl mb-2 text-jl-orange"><i class="fas fa-copy"></i></div>
+            <h3 class="text-xl font-bold mb-2 font-montserrat">Duplicados</h3>
+          </div>
+          <p class="text-gray-600 text-sm mb-4">¿Perdiste tu licencia, título o registro? Tramitamos duplicados de
+            documentos vehiculares de manera eficiente.</p>
+        </div>
+
+        <!-- Service 4: Seguros Auto -->
+        <div class="service-card border border-gray-200">
+          <div class="font-montserrat">
+            <div class="text-2xl mb-2 text-jl-orange"><i class="fas fa-car-side"></i></div>
+            <h3 class="text-xl font-bold mb-2 font-montserrat">Seguros de Auto</h3>
+          </div>
+          <p class="text-gray-600 text-sm mb-4">Cotizaciones competitivas de seguros de auto en New York. Trabajamos con
+            las mejores aseguradoras.</p>
+          <span
+            class="inline-block px-3 py-1 text-xs font-bold rounded-full text-white font-montserrat bg-jl-navy">Desde
+            $35/mes</span>
+        </div>
+
+        <!-- Service 5: Seguros Hogar -->
+        <div class="service-card border border-gray-200">
+          <div class="font-montserrat">
+            <div class="text-2xl mb-2 text-jl-orange"><i class="fas fa-home"></i></div>
+            <h3 class="text-xl font-bold mb-2 font-montserrat">Seguros del Hogar</h3>
+          </div>
+          <p class="text-gray-600 text-sm mb-4">Protege tu hogar y todo lo que más quieres. Pólizas para propietarios e
+            inquilinos en New York.</p>
+        </div>
+
+        <!-- Service 6: Seguros Salud -->
+        <div class="service-card border border-gray-200">
+          <div class="font-montserrat">
+            <div class="text-2xl mb-2 text-jl-orange"><i class="fas fa-heart"></i></div>
+            <h3 class="text-xl font-bold mb-2 font-montserrat">Seguros de Salud</h3>
+          </div>
+          <p class="text-gray-600 text-sm mb-4">Planes de salud para individuos y familias. Te ayudamos a encontrar la
+            cobertura médica perfecta.</p>
+        </div>
+
+        <!-- Service 7: Notario -->
+        <div class="service-card border border-gray-200">
+          <div class="font-montserrat">
+            <div class="text-2xl mb-2 text-jl-orange"><i class="fas fa-stamp"></i></div>
+            <h3 class="text-xl font-bold mb-2 font-montserrat">Notario Público</h3>
+          </div>
+          <p class="text-gray-600 text-sm mb-4">Servicios de notaría pública para documentos legales, contratos, poderes
+            notariales y más.</p>
+        </div>
+
+        <!-- Service 8: Subastas -->
+        <div class="service-card border border-gray-200">
+          <div class="font-montserrat">
+            <div class="text-2xl mb-2 text-jl-orange"><i class="fas fa-gavel"></i></div>
+            <h3 class="text-xl font-bold mb-2 font-montserrat">Subasta de Autos Usados</h3>
+          </div>
+          <p class="text-gray-600 text-sm mb-4">Participa en nuestras subastas de autos usados en New York. Encuentra el
+            vehículo que necesitas a precios increíbles.</p>
+          <span
+            class="inline-block px-3 py-1 text-xs font-bold rounded-full text-white font-montserrat bg-jl-navy">Próxima
+            Subasta</span>
+        </div>
+      </div>
+
+      <!-- CTA Button -->
+      <div class="text-center mt-16">
+        <a href="#contacto" onclick="smoothScroll(event, '#contacto')" class="jl-btn-primary">
+          <i class="fas fa-arrow-right"></i> Solicitar Información
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- AUCTION SECTION -->
+  <section id="subastas" class="py-24 bg-jl-navy">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <!-- Left: Info -->
+        <div>
+          <p class="text-white/80 text-lg leading-relaxed mb-8">
+            En JL Solution subastamos autos usados en New York con total transparencia. Todos nuestros vehículos pasan
+            por un proceso de verificación riguroso para garantizar tu tranquilidad.
+          </p>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-8">
+            <div class="flex items-center gap-2.5">
+              <i class="fas fa-check-circle text-jl-orange-light"></i>
+              <span class="text-white/85 text-sm font-medium">Autos verificados e historial limpio</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <i class="fas fa-check-circle text-jl-orange-light"></i>
+              <span class="text-white/85 text-sm font-medium">Precios por debajo del mercado</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <i class="fas fa-check-circle text-jl-orange-light"></i>
+              <span class="text-white/85 text-sm font-medium">Proceso transparente y seguro</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <i class="fas fa-check-circle text-jl-orange-light"></i>
+              <span class="text-white/85 text-sm font-medium">Financiamiento disponible</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <i class="fas fa-check-circle text-jl-orange-light"></i>
+              <span class="text-white/85 text-sm font-medium">Inspección previa permitida</span>
+            </div>
+            <div class="flex items-center gap-2.5">
+              <i class="fas fa-check-circle text-jl-orange-light"></i>
+              <span class="text-white/85 text-sm font-medium">Documentación completa incluida</span>
+            </div>
+          </div>
+
+          <div class="rounded-xl p-5 mb-8 bg-jl-orange/15 border border-jl-orange/40">
+            <div class="flex items-center gap-3 mb-2">
+              <i class="fas fa-calendar text-lg text-jl-orange-light"></i>
+              <span class="text-white font-bold text-lg font-montserrat">Próxima Subasta</span>
+            </div>
+            <p class="text-white/80 text-sm">Contáctanos para conocer las fechas de nuestras próximas subastas y
+              registrarte como participante.</p>
+          </div>
+
+          <a href="tel:+19292403566" class="jl-btn-primary">
+            <i class="fas fa-gavel"></i> Participar en Subasta
+          </a>
+        </div>
+
+        <!-- Right: Featured cars -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="rounded-xl overflow-hidden bg-white/10">
+            <img src="https://images.unsplash.com/photo-1621007947382-bb3c3994e3fb?w=400&q=80" alt="Toyota Camry"
+              loading="lazy" class="w-full h-48 object-cover">
+            <div class="p-3 text-white">
+              <div class="font-bold font-montserrat">Toyota Camry</div>
+              <div class="text-xs text-white/70">2019 • $8,500</div>
+            </div>
+          </div>
+          <div class="rounded-xl overflow-hidden bg-white/10">
+            <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6?w=400&q=80" alt="Honda Accord"
+              loading="lazy" class="w-full h-48 object-cover">
+            <div class="p-3 text-white">
+              <div class="font-bold font-montserrat">Honda Accord</div>
+              <div class="text-xs text-white/70">2018 • $7,200</div>
+            </div>
+          </div>
+          <div class="rounded-xl overflow-hidden bg-white/10">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd58?w=400&q=80" alt="Ford F-150"
+              loading="lazy" class="w-full h-48 object-cover">
+            <div class="p-3 text-white">
+              <div class="font-bold font-montserrat">Ford F-150</div>
+              <div class="text-xs text-white/70">2020 • $15,900</div>
+            </div>
+          </div>
+          <div class="rounded-xl overflow-hidden bg-white/10">
+            <img src="https://images.unsplash.com/photo-1609521263047-f8f205293f24?w=400&q=80" alt="Nissan Altima"
+              loading="lazy" class="w-full h-48 object-cover">
+            <div class="p-3 text-white">
+              <div class="font-bold font-montserrat">Nissan Altima</div>
+              <div class="text-xs text-white/70">2019 • $6,800</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US SECTION -->
+  <section id="nosotros" class="py-24 bg-jl-cream">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <!-- Left: Image -->
+        <div class="relative">
+          <div class="relative rounded-2xl overflow-hidden shadow-2xl">
+            <img
+              src="https://d2xsxph8kpxj0f.cloudfront.net/310519663469115047/VsguVjSguDvHcp4aMTBWqT/jl-insurance-service-Q4PAypgtb2jNZmTmfDDcqB.webp"
+              alt="Equipo de JL Solution trabajando con un cliente" loading="lazy" class="w-full h-96 object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-[#382345]/60 to-transparent"></div>
+            <div class="absolute bottom-6 left-6 right-6">
+              <div class="text-white font-black text-2xl font-montserrat">Tu Confianza, Nuestra Prioridad</div>
+            </div>
+          </div>
+          <!-- Floating badge -->
+          <div
+            class="absolute -top-5 -right-5 w-28 h-28 rounded-full flex flex-col items-center justify-center shadow-xl text-white text-center font-montserrat bg-jl-orange">
+            <div class="text-white font-black text-3xl leading-none">10+</div>
+            <div class="text-white/90 text-xs font-bold">Años Sirviendo</div>
+          </div>
+        </div>
+
+        <!-- Right: Reasons -->
+        <div>
+          <p class="text-sm font-bold tracking-widest uppercase mb-3 font-montserrat text-jl-orange">
+            ¿Por Qué Elegirnos?
+          </p>
+          <h2 class="jl-section-title text-4xl md:text-5xl mb-8">La Diferencia<br>JL Solution</h2>
+
+          <div class="space-y-4">
+            <div class="flex gap-4">
+              <div class="flex-shrink-0">
+                <i class="fas fa-bolt text-2xl text-jl-orange"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg font-montserrat mb-1">Rapidez Garantizada</h3>
+                <p class="text-gray-600 text-sm">Placas el mismo día, sin esperas innecesarias. Tu tiempo es valioso y
+                  lo respetamos.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="flex-shrink-0">
+                <i class="fas fa-users text-2xl text-jl-orange"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg font-montserrat mb-1">Atención Bilingüe</h3>
+                <p class="text-gray-600 text-sm">Servicio completo en Español e Inglés. Nuestro equipo entiende tus
+                  necesidades.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="flex-shrink-0">
+                <i class="fas fa-award text-2xl text-jl-orange"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg font-montserrat mb-1">10+ Años de Experiencia</h3>
+                <p class="text-gray-600 text-sm">Más de una década sirviendo a la comunidad de Corona y toda el área de
+                  New York.</p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="flex-shrink-0">
+                <i class="fas fa-headset text-2xl text-jl-orange"></i>
+              </div>
+              <div>
+                <h3 class="font-bold text-lg font-montserrat mb-1">Asesoría Personalizada</h3>
+                <p class="text-gray-600 text-sm">Te guiamos en cada paso del proceso, desde el trámite hasta la entrega
+                  final.</p>
+              </div>
+            </div>
+          </div>
+
+          <a href="#contacto" onclick="smoothScroll(event, '#contacto')" class="jl-btn-primary mt-8">
+            <i class="fas fa-arrow-right"></i> Conoce Más
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section class="py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-16">
+        <p class="text-sm font-bold tracking-widest uppercase mb-3 font-montserrat text-jl-orange">
+          Lo Que Dicen Nuestros Clientes
+        </p>
+        <h2 class="jl-section-title mb-4">Testimonios de Confianza</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <!-- Testimonial 1 -->
+        <div class="rounded-2xl p-6 border border-gray-200 bg-gray-50">
+          <div class="flex items-center gap-1 mb-3 text-jl-orange">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-700 mb-4 text-sm leading-relaxed">"Excelente servicio. Llegué a las 10am y a las 11am ya
+            tenía mis placas. Muy recomendado para toda la comunidad latina."</p>
+          <div class="font-bold font-montserrat">María González</div>
+          <div class="text-xs text-gray-500">Corona, Queens</div>
+        </div>
+
+        <!-- Testimonial 2 -->
+        <div class="rounded-2xl p-6 border border-gray-200 bg-gray-50">
+          <div class="flex items-center gap-1 mb-3 text-jl-orange">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-700 mb-4 text-sm leading-relaxed">"Me ayudaron con el seguro de mi auto y del hogar.
+            Precios muy competitivos y el trato fue muy profesional."</p>
+          <div class="font-bold font-montserrat">Carlos Ramírez</div>
+          <div class="text-xs text-gray-500">Jackson Heights, NY</div>
+        </div>
+
+        <!-- Testimonial 3 -->
+        <div class="rounded-2xl p-6 border border-gray-200 bg-gray-50">
+          <div class="flex items-center gap-1 mb-3 text-jl-orange">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+          </div>
+          <p class="text-gray-700 mb-4 text-sm leading-relaxed">"El notario fue muy eficiente y rápido. Todos los
+            documentos quedaron perfectos. Definitivamente volveré."</p>
+          <div class="font-bold font-montserrat">Ana Martínez</div>
+          <div class="text-xs text-gray-500">Flushing, Queens</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contacto" class="py-24 bg-jl-navy">
+    <div class="max-w-6xl mx-auto px-4">
+      <!-- Header -->
+      <div class="text-center mb-14">
+        <p class="text-sm font-bold tracking-widest uppercase mb-3 font-montserrat text-jl-orange">
+          Estamos Aquí Para Ayudarte
+        </p>
+        <h2 class="text-4xl md:text-5xl font-black text-white font-montserrat mb-4">Contáctanos</h2>
+        <div class="w-16 h-1 mx-auto rounded-full bg-jl-orange"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
+        <!-- Left: Contact info + Form -->
+        <div>
+          <!-- Contact info cards -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+            <!-- Address -->
+            <a href="https://maps.google.com/?q=40-12+National+St+Corona+New+York+11368" target="_blank"
+              class="rounded-xl p-4 flex items-start gap-3 transition-all hover:bg-white/10 bg-white/5 border border-white/10">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-jl-orange/20">
+                <i class="fas fa-map-marker-alt text-jl-orange-light"></i>
+              </div>
+              <div>
+                <div class="text-white/60 text-xs font-semibold uppercase tracking-wide mb-0.5 font-montserrat">
+                  Dirección</div>
+                <div class="text-white text-sm font-medium">40-12 National St, Corona, NY 11368</div>
+              </div>
+            </a>
+
+            <!-- Phone -->
+            <a href="tel:+19292403566"
+              class="rounded-xl p-4 flex items-start gap-3 transition-all hover:bg-white/10 bg-white/5 border border-white/10">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-jl-orange/20">
+                <i class="fas fa-phone text-jl-orange-light"></i>
+              </div>
+              <div>
+                <div class="text-white/60 text-xs font-semibold uppercase tracking-wide mb-0.5 font-montserrat">Teléfono
+                </div>
+                <div class="text-white text-sm font-medium">(928) 240-3566</div>
+              </div>
+            </a>
+
+            <!-- Email -->
+            <a href="mailto:jeld.solution@gmail.com"
+              class="rounded-xl p-4 flex items-start gap-3 transition-all hover:bg-white/10 bg-white/5 border border-white/10">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-jl-orange/20">
+                <i class="fas fa-envelope text-jl-orange-light"></i>
+              </div>
+              <div>
+                <div class="text-white/60 text-xs font-semibold uppercase tracking-wide mb-0.5 font-montserrat">Email
+                </div>
+                <div class="text-white text-sm font-medium">jeld.solution@gmail.com</div>
+              </div>
+            </a>
+
+            <!-- Hours -->
+            <div class="rounded-xl p-4 flex items-start gap-3 bg-white/5 border border-white/10">
+              <div class="w-10 h-10 rounded-lg flex items-center justify-center flex-shrink-0 bg-jl-orange/20">
+                <i class="fas fa-clock text-jl-orange-light"></i>
+              </div>
+              <div>
+                <div class="text-white/60 text-xs font-semibold uppercase tracking-wide mb-0.5 font-montserrat">Horario
+                </div>
+                <div class="text-white text-sm font-medium">Lunes – Domingo: 5:00am – 10:00pm</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="rounded-2xl p-6 bg-white/5 border border-white/10">
+            <h3 class="text-white font-bold text-xl mb-5 font-montserrat">Envíanos un Mensaje</h3>
+            <form id="contactForm" class="flex flex-col gap-4" onsubmit="handleFormSubmit(event)">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="name"
+                    class="text-white/70 text-xs font-semibold uppercase tracking-wide block mb-1.5 font-montserrat">Nombre
+                    *</label>
+                  <input type="text" name="name" id="name" required placeholder="Tu nombre completo"
+                    class="w-full px-4 py-2.5 rounded-lg text-gray-900 placeholder-gray-400 text-sm outline-none focus:ring-2 focus:ring-jl-orange bg-[#382345]/30 border border-white/15 text-white">
+                </div>
+                <div>
+                  <label for="phone"
+                    class="text-white/70 text-xs font-semibold uppercase tracking-wide block mb-1.5 font-montserrat">Teléfono
+                    *</label>
+                  <input type="tel" name="phone" id="phone" required placeholder="(718) 000-0000"
+                    class="w-full px-4 py-2.5 rounded-lg text-gray-900 placeholder-gray-400 text-sm outline-none focus:ring-2 focus:ring-jl-orange bg-[#382345]/30 border border-white/15 text-white">
+                </div>
+              </div>
+
+              <div>
+                <label for="service"
+                  class="text-white/70 text-xs font-semibold uppercase tracking-wide block mb-1.5 font-montserrat">Servicio
+                  de Interés</label>
+                <select name="service" id="service"
+                  class="w-full px-4 py-2.5 rounded-lg text-white text-sm outline-none focus:ring-2 focus:ring-jl-orange bg-[#382345] border border-white/15">
+                  <option value="" disabled selected>Selecciona un servicio</option>
+                  <option value="placas">Placas el Mismo Día</option>
+                  <option value="registro">Registro & Transferencias</option>
+                  <option value="duplicados">Duplicados</option>
+                  <option value="auto">Seguros de Auto</option>
+                  <option value="hogar">Seguros del Hogar</option>
+                  <option value="salud">Seguros de Salud</option>
+                  <option value="notario">Notario Público</option>
+                  <option value="subastas">Subasta de Autos</option>
+                </select>
+              </div>
+
+              <div>
+                <label for="message"
+                  class="text-white/70 text-xs font-semibold uppercase tracking-wide block mb-1.5 font-montserrat">Mensaje</label>
+                <textarea name="message" id="message" rows="3" placeholder="¿En qué podemos ayudarte?"
+                  class="w-full px-4 py-2.5 rounded-lg placeholder-gray-400 text-sm outline-none focus:ring-2 focus:ring-jl-orange resize-none bg-[#382345]/30 border border-white/15 text-white"></textarea>
+              </div>
+
+              <button type="submit" class="jl-btn-primary justify-center mt-2 w-full sm:w-auto">
+                <i class="fas fa-paper-plane"></i> Enviar Mensaje
+              </button>
+            </form>
+          </div>
+        </div>
+
+        <!-- Right: Quick actions -->
+        <div class="flex flex-col gap-6">
+          <a href="https://maps.google.com/?q=40-12+National+St+Corona+New+York+11368" target="_blank"
+            class="rounded-xl p-4 flex items-center gap-4 transition-all hover:bg-white/10 bg-white/5 border border-jl-orange/40">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-jl-orange">
+              <i class="fas fa-map-marker-alt text-white text-xl"></i>
+            </div>
+            <div>
+              <div class="text-white font-bold font-montserrat">Cómo Llegar</div>
+              <div class="text-white/70 text-sm">40-12 National St, Corona, NY 11368</div>
+            </div>
+          </a>
+
+          <a href="tel:+19292403566"
+            class="rounded-xl p-4 flex items-center gap-4 transition-all hover:bg-white/10 bg-white/5 border border-jl-orange/40">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-jl-orange">
+              <i class="fas fa-phone text-white text-xl"></i>
+            </div>
+            <div>
+              <div class="text-white font-bold font-montserrat">Llámanos Ahora</div>
+              <div class="text-white/70 text-sm">(928) 240-3566</div>
+            </div>
+          </a>
+
+          <a href="https://wa.me/19292403566" target="_blank"
+            class="rounded-xl p-4 flex items-center gap-4 transition-all hover:bg-white/10 bg-white/5 border border-jl-orange/40">
+            <div class="w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0 bg-jl-orange">
+              <i class="fab fa-whatsapp text-white text-xl"></i>
+            </div>
+            <div>
+              <div class="text-white font-bold font-montserrat">WhatsApp</div>
+              <div class="text-white/70 text-sm">Mensajea Directamente</div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="py-12 bg-black/90">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-10 mb-8">
+        <!-- Company info -->
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-8 h-8 rounded-lg flex items-center justify-center font-black text-white text-sm bg-jl-orange">
+              JL</div>
+            <div>
+              <div class="text-white font-bold text-sm font-montserrat">JL SOLUTION</div>
+              <div class="text-xs text-white/70">Corona, New York</div>
+            </div>
+          </div>
+          <p class="text-white/70 text-sm leading-relaxed">Tu solución completa para trámites automotrices, seguros y
+            servicios notariales en New York.</p>
+        </div>
+
+        <!-- Quick links -->
+        <div>
+          <h4 class="text-white font-bold mb-4 font-montserrat">Enlaces Rápidos</h4>
+          <ul class="space-y-2">
+            <li><a href="#inicio" onclick="smoothScroll(event, '#inicio')"
+                class="text-white/70 hover:text-white text-sm transition">Inicio</a></li>
+            <li><a href="#servicios" onclick="smoothScroll(event, '#servicios')"
+                class="text-white/70 hover:text-white text-sm transition">Servicios</a></li>
+            <li><a href="#subastas" onclick="smoothScroll(event, '#subastas')"
+                class="text-white/70 hover:text-white text-sm transition">Subastas</a></li>
+            <li><a href="#nosotros" onclick="smoothScroll(event, '#nosotros')"
+                class="text-white/70 hover:text-white text-sm transition">Nosotros</a></li>
+            <li><a href="#contacto" onclick="smoothScroll(event, '#contacto')"
+                class="text-white/70 hover:text-white text-sm transition">Contacto</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="text-white font-bold mb-4 font-montserrat">Nuestros Servicios</h4>
+          <ul class="space-y-2">
+            <li><a href="#servicios" class="text-white/70 hover:text-white text-sm transition">Placas el Mismo Día</a>
+            </li>
+            <li><a href="#servicios" class="text-white/70 hover:text-white text-sm transition">Seguros</a></li>
+            <li><a href="#servicios" class="text-white/70 hover:text-white text-sm transition">Notario Público</a></li>
+            <li><a href="#subastas" class="text-white/70 hover:text-white text-sm transition">Subastas de Autos</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="text-white font-bold mb-4 font-montserrat">Contáctanos</h4>
+          <ul class="space-y-2">
+            <li><a href="tel:+19292403566"
+                class="text-white/70 hover:text-white text-sm transition flex items-center gap-2"><i
+                  class="fas fa-phone text-xs"></i> (928) 240-3566</a></li>
+            <li><a href="mailto:jeld.solution@gmail.com"
+                class="text-white/70 hover:text-white text-sm transition flex items-center gap-2"><i
+                  class="fas fa-envelope text-xs"></i> jeld.solution@gmail.com</a></li>
+            <li><a href="https://maps.google.com/?q=40-12+National+St+Corona+New+York+11368" target="_blank"
+                class="text-white/70 hover:text-white text-sm transition flex items-center gap-2"><i
+                  class="fas fa-map-marker-alt text-xs"></i> Corona, NY 11368</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div
+        class="border-t border-white/10 pt-8 flex flex-col sm:flex-row justify-between items-center text-white/70 text-sm">
+        <p>&copy; 2026 JL Solution. Todos los derechos reservados.</p>
+        <div class="flex gap-4 mt-4 sm:mt-0">
+          <a href="#" class="hover:text-white transition">Privacidad</a>
+          <a href="#" class="hover:text-white transition">Términos</a>
+          <a href="#" class="hover:text-white transition">Sitemap</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/19292403566?text=Hola%2C%20me%20interesa%20información%20sobre%20sus%20servicios"
+    target="_blank" rel="noopener noreferrer"
+    class="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 bg-[#25D366]"
+    title="Contactar por WhatsApp" aria-label="Contactar por WhatsApp">
+    <i class="fab fa-whatsapp text-white text-3xl"></i>
+  </a>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Smooth scroll
+    function smoothScroll(e, target) {
+      e.preventDefault();
+      const element = document.querySelector(target);
+      if (element) {
+        // Cierra el menú móvil si está abierto
+        const mobileMenu = document.getElementById('mobileMenu');
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          mobileMenu.classList.remove('flex');
+        }
+
+        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }
+
+    // Navbar scroll effect
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 60) {
+        navbar.classList.add('navbar-shadow');
+      } else {
+        navbar.classList.remove('navbar-shadow');
+      }
+    });
+
+    // Mobile menu toggle
+    document.getElementById('mobileMenuBtn').addEventListener('click', () => {
+      const menu = document.getElementById('mobileMenu');
+      menu.classList.toggle('hidden');
+      if (!menu.classList.contains('hidden')) {
+        menu.classList.add('flex');
+      } else {
+        menu.classList.remove('flex');
+      }
+    });
+
+    // Form submission
+    async function handleFormSubmit(e) {
+      e.preventDefault();
+
+      const formData = new FormData(e.target);
+      const data = {
+        name: formData.get('name'),
+        email: formData.get('email'), // Note: we don't have an email field based on the original form, but kept for compatibility.
+        phone: formData.get('phone'),
+        service: formData.get('service'),
+        message: formData.get('message')
+      };
+
+      try {
+        const response = await fetch('/send-email', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        });
+
+        if (response.ok) {
+          // Prepara el mensaje de WhatsApp
+          const waMessage = `Hola, mi nombre es *${data.name}*.\nMi teléfono es: ${data.phone}\n${data.service ? `Me interesa el servicio de: ${data.service}\n` : ''}${data.message ? `Mensaje: ${data.message}` : ''}`;
+          const waUrl = `https://wa.me/19292403566?text=${encodeURIComponent(waMessage)}`;
+
+          alert('¡Gracias! Tu mensaje ha sido enviado por correo y ahora te redirigiremos a WhatsApp.');
+
+          // Abrir WhatsApp en una nueva pestaña
+          window.open(waUrl, '_blank');
+
+          document.getElementById('contactForm').reset();
+        } else {
+          alert('Error enviando el mensaje. Inténtalo de nuevo.');
+        }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('Error enviando el mensaje. Inténtalo de nuevo.');
+      }
+    }
+  </script>
+</body>
+
+</html>

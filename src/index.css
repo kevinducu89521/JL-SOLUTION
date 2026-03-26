@@ -1,0 +1,238 @@
+/*
+ * JL Solution — Design System
+ * Philosophy: "Confianza Profesional" — Corporate Modern con calidez latina
+ * Colors: Navy Blue (#0D2B4E) + Orange (#E85D04) + Cream (#F8F4EF)
+ * Fonts: Montserrat (display) + Source Sans 3 (body)
+ * Layout: Asymmetric with diagonal section cuts
+ */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-jl-navy: oklch(0.22 0.07 245);
+  --color-jl-navy-dark: oklch(0.15 0.06 245);
+  --color-jl-navy-light: oklch(0.32 0.07 245);
+  --color-jl-orange: oklch(0.62 0.19 42);
+  --color-jl-orange-dark: oklch(0.52 0.19 42);
+  --color-jl-orange-light: oklch(0.72 0.19 42);
+  --color-jl-cream: oklch(0.97 0.01 80);
+  --color-jl-cream-dark: oklch(0.93 0.015 80);
+  --font-sans: "Source Sans 3", sans-serif;
+  --font-montserrat: "Montserrat", sans-serif;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  /* JL Solution Brand Colors */
+  --jl-navy: oklch(0.22 0.07 245);
+  --jl-navy-dark: oklch(0.15 0.06 245);
+  --jl-navy-light: oklch(0.32 0.07 245);
+  --jl-orange: oklch(0.62 0.19 42);
+  --jl-orange-dark: oklch(0.52 0.19 42);
+  --jl-orange-light: oklch(0.72 0.19 42);
+  --jl-cream: oklch(0.97 0.01 80);
+  --jl-cream-dark: oklch(0.93 0.015 80);
+
+  --radius: 0.5rem;
+  --background: oklch(0.97 0.01 80);
+  --foreground: oklch(0.15 0.03 245);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.15 0.03 245);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.15 0.03 245);
+  --primary: oklch(0.22 0.07 245);
+  --primary-foreground: oklch(0.97 0.01 80);
+  --secondary: oklch(0.62 0.19 42);
+  --secondary-foreground: oklch(1 0 0);
+  --muted: oklch(0.93 0.015 80);
+  --muted-foreground: oklch(0.45 0.04 245);
+  --accent: oklch(0.62 0.19 42);
+  --accent-foreground: oklch(1 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.88 0.02 245);
+  --input: oklch(0.88 0.02 245);
+  --ring: oklch(0.62 0.19 42);
+  --chart-1: oklch(0.22 0.07 245);
+  --chart-2: oklch(0.62 0.19 42);
+  --chart-3: oklch(0.32 0.07 245);
+  --chart-4: oklch(0.72 0.19 42);
+  --chart-5: oklch(0.52 0.07 245);
+  --sidebar: oklch(0.22 0.07 245);
+  --sidebar-foreground: oklch(0.97 0.01 80);
+  --sidebar-primary: oklch(0.62 0.19 42);
+  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-accent: oklch(0.32 0.07 245);
+  --sidebar-accent-foreground: oklch(0.97 0.01 80);
+  --sidebar-border: oklch(0.32 0.07 245);
+  --sidebar-ring: oklch(0.62 0.19 42);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Source Sans 3', sans-serif;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+
+  /* JL Solution Custom Components */
+  .jl-btn-primary {
+    @apply inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-jl-orange text-white font-bold font-montserrat transition-all duration-300 no-underline hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(0,0,0,0.2)];
+  }
+  
+  .jl-section-title {
+    @apply text-4xl md:text-5xl font-black text-gray-900 font-montserrat;
+  }
+  
+  .service-card {
+    @apply p-5 rounded-xl border-l-[4px] border-jl-orange bg-[#f9f7f4] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(0,0,0,0.1)];
+  }
+
+  .navbar-shadow {
+    @apply shadow-[0_4px_20px_rgba(0,0,0,0.1)];
+  }
+
+  .diagonal-section {
+    clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+    margin-top: -3rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  .diagonal-section-reverse {
+    clip-path: polygon(0 0, 100% 5%, 100% 100%, 0 95%);
+    margin-top: -3rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes fadeInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes pulse-orange {
+    0%, 100% {
+      box-shadow: 0 0 0 0 oklch(0.62 0.19 42 / 0.4);
+    }
+    50% {
+      box-shadow: 0 0 0 12px oklch(0.62 0.19 42 / 0);
+    }
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.6s ease forwards;
+  }
+
+  .animate-fade-in-left {
+    animation: fadeInLeft 0.6s ease forwards;
+  }
+
+  .pulse-cta {
+    animation: pulse-orange 2s infinite;
+  }
+}
