@@ -1,0 +1,42 @@
+# Guía de Despliegue Profesional: JL Solution
+
+Todo el código ya está subido en tu repositorio de GitHub de forma segura. Ahora vamos a conectar la nube para que tu página sea pública.
+
+## 1. Comprar el Dominio (Namecheap)
+1. Ve a [Namecheap](https://www.namecheap.com/) y busca el nombre `jlsolution` (por ejemplo, `jlsolution.com` o `.net`).
+2. Añádelo al carrito y finaliza la compra.
+3. Déjalo listo, volveremos a él en el Paso 4.
+
+## 2. Lanzar el Diseño Frontend (Vercel)
+Vercel se encargará de mostrar el diseño de tu página a la velocidad de la luz.
+1. Entra a [Vercel.com](https://vercel.com) y selecciona **"Sign Up"**. Únete usando tu cuenta de **GitHub**.
+2. Dale clic al botón negro **"Add New..."** y selecciona **"Project"**.
+3. Verás tu repositorio `JL-SOLUTION` en la lista. Dale clic en **"Import"**.
+4. Despliega la pestaña "Build and Output Settings" y configúralos así:
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist/public`
+5. Dale clic a **Deploy**. En 1 minuto tu página estará en vivo, pero el formulario de contacto aún no enviará correos hasta que hagamos el backend.
+
+## 3. Lanzar el Servidor de Correos (Render)
+Render se encargará de recibir los datos del formulario y enviar el correo.
+1. Entra a [Render.com](https://render.com) y selecciona **"Get Started"**, registrándote también con tu **GitHub**.
+2. Haz clic en **"New +"** y selecciona **"Web Service"**.
+3. Conecta tu repositorio `JL-SOLUTION`.
+4. En la configuración:
+   - **Name:** jlsolution-backend (o el que quieras)
+   - **Environment:** Node
+   - **Build Command:** `npm install && npm run build`
+   - **Start Command:** `npm run start`
+   - Selecciona el plan **Free** o **Starter ($7/mes)** (El de pago es altamente recomendado para evitar que el servidor de correos "se duerma" y los clientes vean errores al intentar enviar un mensaje).
+5. Desplázate hacia abajo hasta **Environment Variables** (Variables de Entorno) y haz clic en "Add Environment Variable":
+   - **Key:** `GMAIL_APP_PASSWORD`  | **Value:** *(Pega aquí la contraseña de aplicación de tu Gmail que creaste antes)*
+   - **Key:** `NODE_ENV`  | **Value:** `production`
+6. Haz clic en **"Create Web Service"**.
+
+## 4. Conectar el Dominio (Toque Final)
+1. En **Vercel**, ve a los ajustes de tu proyecto ("Settings" -> "Domains").
+2. Escribe el dominio que compraste en Namecheap (ej. `jlsolution.com`) y haz clic en Add.
+3. Vercel te dará unas instrucciones en pantalla para copiar dos valores (un `A Record` y un `CNAME`).
+4. Ve a Namecheap, busca tu dominio, entra a **Advanced DNS**, añade (Add New Record) los dos récords que te dio Vercel y guarda.
+
+¡En cuestión de minutos tu página estará 100% pública y funcionando!

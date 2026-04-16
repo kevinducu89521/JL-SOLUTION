@@ -68,7 +68,7 @@
   --jl-navy: oklch(0.22 0.07 245);
   --jl-navy-dark: oklch(0.15 0.06 245);
   --jl-navy-light: oklch(0.32 0.07 245);
-  --jl-orange: oklch(0.62 0.19 42);
+  --jl-orange: oklch(74.988% 0.15751 104.674);
   --jl-orange-dark: oklch(0.52 0.19 42);
   --jl-orange-light: oklch(0.72 0.19 42);
   --jl-cream: oklch(0.97 0.01 80);
@@ -113,13 +113,21 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
     font-family: 'Source Sans 3', sans-serif;
   }
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Montserrat', sans-serif;
   }
+
   button:not(:disabled),
   [role="button"]:not([aria-disabled="true"]),
   [type="button"]:not(:disabled),
@@ -164,19 +172,19 @@
 
   /* JL Solution Custom Components */
   .jl-btn-primary {
-    @apply inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-jl-orange text-white font-bold font-montserrat transition-all duration-300 no-underline hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(0,0,0,0.2)];
+    @apply inline-flex items-center gap-2 px-7 py-3 rounded-xl bg-jl-orange text-white font-bold font-montserrat transition-all duration-300 no-underline hover:-translate-y-0.5 hover:shadow-[0_10px_25px_rgba(0, 0, 0, 0.2)];
   }
-  
+
   .jl-section-title {
     @apply text-4xl md:text-5xl font-black text-gray-900 font-montserrat;
   }
-  
+
   .service-card {
-    @apply p-5 rounded-xl border-l-[4px] border-jl-orange bg-[#f9f7f4] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(0,0,0,0.1)];
+    @apply p-5 rounded-xl border-l-[4px] border-jl-orange bg-[#f9f7f4] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(0, 0, 0, 0.1)];
   }
 
   .navbar-shadow {
-    @apply shadow-[0_4px_20px_rgba(0,0,0,0.1)];
+    @apply shadow-[0_4px_20px_rgba(0, 0, 0, 0.1)];
   }
 
   .diagonal-section {
@@ -198,6 +206,7 @@
       opacity: 0;
       transform: translateY(30px);
     }
+
     to {
       opacity: 1;
       transform: translateY(0);
@@ -209,6 +218,7 @@
       opacity: 0;
       transform: translateX(-30px);
     }
+
     to {
       opacity: 1;
       transform: translateX(0);
@@ -216,9 +226,12 @@
   }
 
   @keyframes pulse-orange {
-    0%, 100% {
+
+    0%,
+    100% {
       box-shadow: 0 0 0 0 oklch(0.62 0.19 42 / 0.4);
     }
+
     50% {
       box-shadow: 0 0 0 12px oklch(0.62 0.19 42 / 0);
     }
@@ -234,5 +247,93 @@
 
   .pulse-cta {
     animation: pulse-orange 2s infinite;
+  }
+
+  /* Typewriter cursor */
+  @keyframes cursor-blink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+  }
+  .typewriter-cursor {
+    display: inline-block;
+    color: oklch(0.72 0.19 42);
+    font-weight: 400;
+    animation: cursor-blink 0.75s step-end infinite;
+    margin-left: 2px;
+  }
+
+  /* Scroll Reveal */
+  .reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+
+  .reveal.delay-1 {
+    transition-delay: 0.1s;
+  }
+
+  .reveal.delay-2 {
+    transition-delay: 0.2s;
+  }
+
+  .reveal.delay-3 {
+    transition-delay: 0.3s;
+  }
+
+  .reveal.delay-4 {
+    transition-delay: 0.4s;
+  }
+
+  .reveal.delay-5 {
+    transition-delay: 0.5s;
+  }
+
+  .reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* Hero title highlight */
+  .hero-title span {
+    background: linear-gradient(90deg, oklch(0.72 0.19 42), oklch(0.85 0.18 55));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Stats card */
+  .stat-card {
+    @apply flex flex-col items-center justify-center p-6 rounded-2xl bg-white/10 border border-white/20 backdrop-blur-sm;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+  }
+
+  /* WhatsApp button premium pulse */
+  @keyframes wa-pulse {
+    0% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5);
+    }
+
+    70% {
+      box-shadow: 0 0 0 14px rgba(37, 211, 102, 0);
+    }
+
+    100% {
+      box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+    }
+  }
+
+  .wa-pulse {
+    animation: wa-pulse 2.2s infinite;
+  }
+
+  /* Staggered service cards */
+  .service-card {
+    @apply p-5 rounded-xl border-l-[4px] border-jl-orange bg-[#f9f7f4] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(0, 0, 0, 0.1)];
   }
 }
