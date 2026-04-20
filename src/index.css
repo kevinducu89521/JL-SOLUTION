@@ -65,7 +65,7 @@
 
 :root {
   /* JL Solution Brand Colors */
-  --jl-navy: oklch(0.22 0.07 245);
+  --jl-navy: oklch(40.879% 0.13587 255.271);
   --jl-navy-dark: oklch(0.15 0.06 245);
   --jl-navy-light: oklch(0.32 0.07 245);
   --jl-orange: #7db8ff;
