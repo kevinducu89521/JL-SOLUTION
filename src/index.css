@@ -1,7 +1,7 @@
 /*
  * JL Solution — Design System
- * Philosophy: "Confianza Profesional" — Corporate Modern con calidez latina
- * Colors: Navy Blue (#0D2B4E) + Orange (#E85D04) + Cream (#F8F4EF)
+ * Philosophy: "Confianza Profesional" — Moderno y fresco en azul claro con blanco
+ * Colors: Navy Blue (#0D2B4E) + Light Blue (#7DB8FF) + White (#FFFFFF)
  * Fonts: Montserrat (display) + Source Sans 3 (body)
  * Layout: Asymmetric with diagonal section cuts
  */
@@ -13,11 +13,11 @@
   --color-jl-navy: oklch(0.22 0.07 245);
   --color-jl-navy-dark: oklch(0.15 0.06 245);
   --color-jl-navy-light: oklch(0.32 0.07 245);
-  --color-jl-orange: oklch(0.62 0.19 42);
-  --color-jl-orange-dark: oklch(0.52 0.19 42);
-  --color-jl-orange-light: oklch(0.72 0.19 42);
-  --color-jl-cream: oklch(0.97 0.01 80);
-  --color-jl-cream-dark: oklch(0.93 0.015 80);
+  --color-jl-orange: #7db8ff;
+  --color-jl-orange-dark: #5792e6;
+  --color-jl-orange-light: #c4e0ff;
+  --color-jl-cream: #ffffff;
+  --color-jl-cream-dark: #f5fbff;
   --font-sans: "Source Sans 3", sans-serif;
   --font-montserrat: "Montserrat", sans-serif;
 }
@@ -68,45 +68,45 @@
   --jl-navy: oklch(0.22 0.07 245);
   --jl-navy-dark: oklch(0.15 0.06 245);
   --jl-navy-light: oklch(0.32 0.07 245);
-  --jl-orange: oklch(74.988% 0.15751 104.674);
-  --jl-orange-dark: oklch(0.52 0.19 42);
-  --jl-orange-light: oklch(0.72 0.19 42);
-  --jl-cream: oklch(0.97 0.01 80);
-  --jl-cream-dark: oklch(0.93 0.015 80);
+  --jl-orange: #7db8ff;
+  --jl-orange-dark: #5792e6;
+  --jl-orange-light: #c4e0ff;
+  --jl-cream: #ffffff;
+  --jl-cream-dark: #f5fbff;
 
   --radius: 0.5rem;
-  --background: oklch(0.97 0.01 80);
+  --background: #ffffff;
   --foreground: oklch(0.15 0.03 245);
-  --card: oklch(1 0 0);
+  --card: #ffffff;
   --card-foreground: oklch(0.15 0.03 245);
-  --popover: oklch(1 0 0);
+  --popover: #ffffff;
   --popover-foreground: oklch(0.15 0.03 245);
   --primary: oklch(0.22 0.07 245);
-  --primary-foreground: oklch(0.97 0.01 80);
-  --secondary: oklch(0.62 0.19 42);
-  --secondary-foreground: oklch(1 0 0);
-  --muted: oklch(0.93 0.015 80);
+  --primary-foreground: #ffffff;
+  --secondary: #7db8ff;
+  --secondary-foreground: #ffffff;
+  --muted: #f5fbff;
   --muted-foreground: oklch(0.45 0.04 245);
-  --accent: oklch(0.62 0.19 42);
-  --accent-foreground: oklch(1 0 0);
+  --accent: #7db8ff;
+  --accent-foreground: #ffffff;
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.985 0 0);
   --border: oklch(0.88 0.02 245);
   --input: oklch(0.88 0.02 245);
-  --ring: oklch(0.62 0.19 42);
+  --ring: #7db8ff;
   --chart-1: oklch(0.22 0.07 245);
-  --chart-2: oklch(0.62 0.19 42);
+  --chart-2: #7db8ff;
   --chart-3: oklch(0.32 0.07 245);
-  --chart-4: oklch(0.72 0.19 42);
+  --chart-4: #c4e0ff;
   --chart-5: oklch(0.52 0.07 245);
   --sidebar: oklch(0.22 0.07 245);
-  --sidebar-foreground: oklch(0.97 0.01 80);
-  --sidebar-primary: oklch(0.62 0.19 42);
-  --sidebar-primary-foreground: oklch(1 0 0);
+  --sidebar-foreground: #ffffff;
+  --sidebar-primary: #7db8ff;
+  --sidebar-primary-foreground: #ffffff;
   --sidebar-accent: oklch(0.32 0.07 245);
-  --sidebar-accent-foreground: oklch(0.97 0.01 80);
+  --sidebar-accent-foreground: #ffffff;
   --sidebar-border: oklch(0.32 0.07 245);
-  --sidebar-ring: oklch(0.62 0.19 42);
+  --sidebar-ring: #7db8ff;
 }
 
 @layer base {
@@ -180,7 +180,7 @@
   }
 
   .service-card {
-    @apply p-5 rounded-xl border-l-[4px] border-jl-orange bg-[#f9f7f4] transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(0,_0,_0,_0.1)];
+    @apply p-5 rounded-xl border-l-[4px] border-jl-orange bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_15px_35px_rgba(0,_0,_0,_0.1)];
   }
 
   .navbar-shadow {
@@ -229,11 +229,11 @@
 
     0%,
     100% {
-      box-shadow: 0 0 0 0 oklch(0.62 0.19 42 / 0.4);
+      box-shadow: 0 0 0 0 rgba(125, 184, 255, 0.4);
     }
 
     50% {
-      box-shadow: 0 0 0 12px oklch(0.62 0.19 42 / 0);
+      box-shadow: 0 0 0 12px rgba(125, 184, 255, 0);
     }
   }
 
@@ -256,7 +256,7 @@
   }
   .typewriter-cursor {
     display: inline-block;
-    color: oklch(0.72 0.19 42);
+    color: #7db8ff;
     font-weight: 400;
     animation: cursor-blink 0.75s step-end infinite;
     margin-left: 2px;
